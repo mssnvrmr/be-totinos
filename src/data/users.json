@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "edd51f22-5555-46ef-92b6-8604a5bd5b49",
+      "email": "jan.doe@gmail.com",
+      "phone": "5060984577",
+      "password": "$2b$10$g3b9VUlaOGSJkcXWv39w6uv/bCAuA5GNbPR.CxnZzClZvlGGtxc8i",
+      "createdAt": "2026-07-25T21:09:39.288Z",
+      "role": "user"
+    },
+    {
+      "id": "8297451f-db72-4e03-9cd9-16c67e2dc056",
+      "email": "admin@gmail.com",
+      "password": "$2b$10$R/3Zng0jpBjrK10/tumENufUn3YD3eYulw/NG34SoTagw/Q5yIS/S",
+      "phone": "543 0984 113",
+      "createdAt": "2026-07-25T21:11:39.360Z",
+      "role": "admin"
+    },
+    {
+      "id": "6491f53c-dd5e-45df-a0fc-b4dd7576a692",
+      "email": "jon.doe@gmail.com",
+      "password": "$2b$10$6Vk9PF3EDQCQ0z.6aSdON.tUr3KQRGnjkMLfHLNm9kFV4ioJAcOi.",
+      "phone": "5430847483",
+      "createdAt": "2026-07-25T22:04:09.066Z",
+      "role": "user"
+    }
+  ]
+}

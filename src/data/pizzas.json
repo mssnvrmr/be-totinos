@@ -1,0 +1,39 @@
+{
+    "pizzas": [
+        {
+            "id": "1",
+            "name": "Margherita",
+            "ingredients": [],
+            "description": "A classic Italian pizza with tomato, mozzarella, and basil.",
+            "price": 25.00
+        },
+        {
+            "id": "2",
+            "name": "Pepperoni",
+            "ingredients": [],
+            "description": "A pizza with tomato, mozzarella, and pepperoni.",
+            "price": 30.00
+        },
+        {
+            "id": "3",
+            "name": "Mushroom",
+            "ingredients": [],
+            "description": "A pizza with tomato, mozzarella, and mushrooms.",
+            "price": 30.00
+        },
+        {
+            "id": "4",
+            "name": "Ham",
+            "ingredients": [],
+            "description": "A pizza with tomato, mozzarella, and Ham.",
+            "price": 30.00
+        },
+        {
+            "id": "5",
+            "name": "Custom",
+            "ingredients": [],
+            "description": "A pizza base with tomato sauce. The rest is up to you.",
+            "price": 5.00
+        }
+    ]
+}
