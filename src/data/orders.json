@@ -1,24 +1,29 @@
 {
-    "orders": [
-        {
-            "id": "1",
-            "orderedByUserEmail": "jane.doe@example.com",
-            "updatedByUserEmail": "john.doe@example.com",
-            "pizzas": ["1", "2"],
-            "status": "finished",
-            "note": "No onions please",
-            "createdAt": "2026-07-17T00:48:33.085Z",
-            "updatedAt": "2026-08-17T00:48:33.085Z"
-        },
-        {
-            "id": "2",
-            "orderedByUserEmail": "jim.beam@example.com",
-            "updatedByUserEmail": "john.doe@example.com",
-            "pizzas": ["5"],
-            "status": "active",
-            "note": "Use the ham for half and the mushrooms for the other half",
-            "createdAt": "2026-07-17T00:48:33.085Z",
-            "updatedAt": "2026-08-17T00:48:33.085Z"
-        }
-    ]
+  "orders": [
+    {
+      "id": "1",
+      "orderedByUserEmail": "jane.doe@example.com",
+      "updatedByUserEmail": "john.doe@example.com",
+      "pizzas": [
+        "1",
+        "2"
+      ],
+      "status": "finished",
+      "note": "No onions please",
+      "createdAt": "2026-07-17T00:48:33.085Z",
+      "updatedAt": "2026-08-17T00:48:33.085Z"
+    },
+    {
+      "id": "2",
+      "orderedByUserEmail": "jim.beam@example.com",
+      "updatedByUserEmail": "john.doe@example.com",
+      "pizzas": [
+        "5"
+      ],
+      "status": "active",
+      "note": "Use the ham for half and the mushrooms for the other half",
+      "createdAt": "2026-07-17T00:48:33.085Z",
+      "updatedAt": "2026-08-17T00:48:33.085Z"
+    }
+  ]
 }
