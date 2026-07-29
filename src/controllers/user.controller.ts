@@ -24,7 +24,7 @@ export const register = async (req: Request, res: Response, next: NextFunction) 
 export const login = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const result = await loginService(req.body);
-    res.status(200).json(result);
+    res.status(200).json({ name: result.name, token: result.token });
   } catch (error) {
     next(error);
   }

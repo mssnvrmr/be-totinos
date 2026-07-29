@@ -40,8 +40,8 @@ const login = async ({ email, password }: { email: string, password: string }) =
   }
 
   const token = jwt.sign({ id: foundUser.id, email: foundUser.email }, process.env.JWT_SECRET as string, { expiresIn: "24h" });
-
-  return token;
+  const name = foundUser.email;
+  return { token, name };
 }
 
 const getAll = async () => {
