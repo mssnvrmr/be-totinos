@@ -3,6 +3,7 @@ import { UserRole } from '../constants/user-roles';
 
 export const UserSchema = z.object({
   id: z.string(),
+  username: z.string().min(3, { message: "Username must be at least 3 characters long" }),
   email: z.email({ message: "Invalid email address" }),
   password: z.string().min(8, { message: "Password must be at least 8 characters long" }),
   phone: z.string().min(9, { message: "Phone must be at least 9 characters long" }),
@@ -11,6 +12,7 @@ export const UserSchema = z.object({
 });
 
 export const CreateUserSchema = z.object({
+  username: z.string().min(3, { message: "Username must be at least 3 characters long" }),
   email: z.email({ message: "Invalid email address" }),
   password: z.string().min(8, { message: "Password must be at least 8 characters long" }),
   phone: z.string().min(9, { message: "Phone must be at least 9 characters long" }),
@@ -23,6 +25,7 @@ export const LoginUserSchema = z.object({
 });
 
 export const UpdateUserSchema = z.object({
+  username: z.string().min(3, { message: "Username must be at least 3 characters long" }).optional(),
   email: z.email({ message: "Invalid email address" }).optional(),
   password: z.string().min(8, { message: "Password must be at least 8 characters long" }).optional(),
   phone: z.string().min(9, { message: "Phone must be at least 9 characters long" }).optional(),

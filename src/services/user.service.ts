@@ -6,7 +6,7 @@ import { CreateUserModel } from '../models/user.model';
 import { UserRole } from '../constants/user-roles';
 import { HttpError } from '../utils/http-error';
 
-const register = async ({ email, password, phone, role }: { email: string, password: string, phone: string, role: UserRole }) => {
+const register = async ({ username, email, password, phone, role }: { username: string, email: string, password: string, phone: string, role: UserRole }) => {
   const db = readDB("users.json");
   const foundUser = db.users.find((user: User) => user.email === email);
 
@@ -16,7 +16,7 @@ const register = async ({ email, password, phone, role }: { email: string, passw
   }
 
   const hashedPassword = await hash(password, 10);
-  const newUser: User = CreateUserModel({ email, password: hashedPassword, phone, role });
+  const newUser: User = CreateUserModel({ username, email, password: hashedPassword, phone, role });
   db.users.push(newUser);
   writeDB("users.json", db);
   return newUser;
@@ -84,7 +84,7 @@ const getByEmail = async (email: string) => {
   return userWithoutPassword;
 }
 
-const update = async (id: string, { email, password: newPassword, phone, role }: UpdateUser) => {
+const update = async (id: string, { username, email, password: newPassword, phone, role }: UpdateUser) => {
   const db = readDB("users.json");
 
   const index = db.users.findIndex((user: User) => user.id === id);
@@ -94,7 +94,7 @@ const update = async (id: string, { email, password: newPassword, phone, role }:
     throw error;
   }
 
-  db.users[index] = { ...db.users[index], ...{ email, password: newPassword ? await hash(newPassword, 10) : db.users[index].password, phone, role }, id };
+  db.users[index] = { ...db.users[index], ...{ username, email, password: newPassword ? await hash(newPassword, 10) : db.users[index].password, phone, role }, id };
   writeDB("users.json", db);
 
   const { password, ...userWithoutPassword } = db.users[index];
