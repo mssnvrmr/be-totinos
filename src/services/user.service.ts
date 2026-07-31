@@ -1,12 +1,12 @@
 import { hash, compare } from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { readDB, writeDB } from '../utils/db';
-import { User, UpdateUser } from '../schemas/user.schema';
+import { User, UpdateUser, CreateUser, LoginUser } from '../schemas/user.schema';
 import { CreateUserModel } from '../models/user.model';
 import { UserRole } from '../constants/user-roles';
 import { HttpError } from '../utils/http-error';
 
-const register = async ({ username, email, password, phone, role }: { username: string, email: string, password: string, phone: string, role: UserRole }) => {
+const register = async ({ username, email, password, phone, role }: CreateUser) => {
   const db = readDB("users.json");
   const foundUser = db.users.find((user: User) => user.email === email);
 
@@ -17,12 +17,14 @@ const register = async ({ username, email, password, phone, role }: { username: 
 
   const hashedPassword = await hash(password, 10);
   const newUser: User = CreateUserModel({ username, email, password: hashedPassword, phone, role });
+
   db.users.push(newUser);
   writeDB("users.json", db);
+
   return newUser;
 }
 
-const login = async ({ email, password }: { email: string, password: string }) => {
+const login = async ({ email, password }: LoginUser) => {
   const db = readDB("users.json");
 
   const foundUser = db.users.find((user: User) => user.email === email);
@@ -40,8 +42,10 @@ const login = async ({ email, password }: { email: string, password: string }) =
   }
 
   const token = jwt.sign({ id: foundUser.id, email: foundUser.email }, process.env.JWT_SECRET as string, { expiresIn: "24h" });
-  const name = foundUser.email;
-  return { token, name };
+  const name = foundUser.username;
+  const role = foundUser.role;
+  
+  return { token, name, role };
 }
 
 const getAll = async () => {

@@ -26,6 +26,33 @@
       "phone": "5430847483",
       "createdAt": "2026-07-25T22:04:09.066Z",
       "role": "user"
+    },
+    {
+      "id": "7eb4b3d1-03a1-4fac-ad5f-328f8b35b9f6",
+      "username": "Mariana",
+      "email": "mariana@gmail.com",
+      "password": "$2b$10$C9kUUlD5JDx8fz2EfjG1HO7D.j.X8cTB8RRDXaJVt767k5/q8L6UC",
+      "phone": "836744871",
+      "createdAt": "2026-07-30T01:27:35.454Z",
+      "role": "admin"
+    },
+    {
+      "id": "8fcd8e8b-ae3b-4191-9f57-ed4049aafebc",
+      "username": "kevin",
+      "email": "kevin@gmail.com",
+      "password": "$2b$10$1O4j5G8HvOOs8vo4ZialXuf/Bgnf0FWo03uJOjnoTYft7qnyb4G8a",
+      "phone": "7372430982",
+      "createdAt": "2026-07-31T19:40:05.468Z",
+      "role": "user"
+    },
+    {
+      "id": "85e85836-9545-4673-bcda-8e81c791a597",
+      "username": "weonazo",
+      "email": "wea@gmail.com",
+      "password": "$2b$10$URoToJb/yXh.EZsOLce/u.eo4fiFa5CCF7gxEY64v..CGR8El9ehW",
+      "phone": "123455345435",
+      "createdAt": "2026-07-31T20:30:16.019Z",
+      "role": "user"
     }
   ]
 }

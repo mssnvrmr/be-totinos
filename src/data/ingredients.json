@@ -3,42 +3,50 @@
     {
       "id": "1",
       "name": "Cheese",
-      "price": 10.00
+      "price": 10.00,
+      "stock": 100
     },
     {
       "id": "2",
       "name": "Mushrooms",
-      "price": 15.00
+      "price": 15.00,
+      "stock": 100
     },
     {
       "id": "3",
       "name": "Pepperoni",
-      "price": 15.00
+      "price": 15.00,
+      "stock": 100
     },
     {
       "id": "4",
       "name": "Sausage",
-      "price": 10.00
+      "price": 10.00,
+      "stock": 100
     },
     {
       "id": "5",
       "name": "Onions",
-      "price": 5.00
+      "price": 5.00,
+      "stock": 100
     },
     {
       "id": "6",
       "name": "Bell Peppers",
-      "price": 5.00
+      "price": 5.00,
+      "stock": 100
     },
     {
       "id": "7",
       "name": "Olives",
-      "price": 10.00
+      "price": 10.00,
+      "stock": 100
     },
     {
       "id": "8",
       "name": "Tomatoes",
-      "price": 5.00
+      "price": 5.00,
+      "stock": 100
     }
   ]
 }
