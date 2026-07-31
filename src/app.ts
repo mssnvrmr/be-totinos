@@ -5,6 +5,9 @@ import express from "express";
 import cors from "cors";
 
 import { router as userRoutes } from "./routes/user.routes";
+import { router as ingredientRoutes } from "./routes/ingredient.routes";
+import { router as pizzaRoutes } from "./routes/pizza.routes";
+import { router as orderRoutes } from "./routes/order.routes";
 
 import { errorHandler } from "./middlewares/error.middleware";
 
@@ -17,6 +20,9 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
+app.use("/api/ingredients", ingredientRoutes);
+app.use("/api/pizzas", pizzaRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.use(errorHandler);
 
