@@ -9,8 +9,7 @@ const create = async ({ name, price, stock }: CreateIngredient) => {
   const foundIngredient = db.ingredients.find((ingredient: Ingredient) => ingredient.name.toLowerCase() === name.toLowerCase());
 
   if (foundIngredient) {
-    const error = new HttpError("Ingredient already exists", 409);
-    throw error;
+    throw new HttpError("Ingredient already exists", 409);
   }
 
   const ingredient = CreateIngredientModel({ name, price, stock });

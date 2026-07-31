@@ -30,7 +30,6 @@ export const OrderSchema = z.object({
 });
 
 export const CreateOrderSchema = z.object({
-  createdAt: z.iso.datetime(),
   orderedByUserEmail: emailFromUsersRecordSchema,
   pizzas: z.array(idFromPizzasRecordSchema),
   status: z.enum(OrderStatus),
