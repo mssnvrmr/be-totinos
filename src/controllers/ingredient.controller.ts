@@ -2,11 +2,12 @@ import {
   create as createService,
   getAll as getAllService,
   getById as getByIdService,
+  getNamesByIds as getNamesByIdsService,
   update as updateService,
   remove as removeService
 } from '../services/ingredient.service';
 import { Request, Response, NextFunction } from 'express';
-import { CreateIngredient, UpdateIngredient } from '../schemas/ingredient.schema';
+import { CreateIngredient, GetIngredientNames, UpdateIngredient } from '../schemas/ingredient.schema';
 
 export const create = async (req: Request & { body: CreateIngredient }, res: Response, next: NextFunction) => {
   try {
@@ -30,6 +31,15 @@ export const getById = async (req: Request<{ id: string }>, res: Response, next:
   try {
     const ingredient = await getByIdService(req.params.id);
     res.status(200).json(ingredient);
+  } catch (error) {
+    next(error);
+  }
+}
+
+export const getNamesByIds = async (req: Request & { body: GetIngredientNames }, res: Response, next: NextFunction) => {
+  try {
+    const names = await getNamesByIdsService(req.body.ids);
+    res.status(200).json(names);
   } catch (error) {
     next(error);
   }

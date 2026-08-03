@@ -36,6 +36,20 @@ const getById = async (id: string) => {
   return ingredient;
 }
 
+const getNamesByIds = async (ids: string[]) => {
+  const db = readDB("ingredients.json");
+
+  return ids.map((id) => {
+    const ingredient = db.ingredients.find((ingredient: Ingredient) => ingredient.id === id);
+
+    if (!ingredient) {
+      throw new HttpError(`Ingredient not found: ${id}`, 404);
+    }
+
+    return { id: ingredient.id, name: ingredient.name };
+  });
+}
+
 const update = async (id: string, { name, price, stock }: UpdateIngredient) => {
   const db = readDB("ingredients.json");
   const ingredient = db.ingredients.find((ingredient: Ingredient) => ingredient.id === id);
@@ -66,4 +80,4 @@ const remove = async (id: string) => {
   writeDB("ingredients.json", db);
 };
 
-export { create, getAll, getById, update, remove };
+export { create, getAll, getById, getNamesByIds, update, remove };

@@ -1,5 +1,5 @@
 export enum OrderStatus {
-    ACTIVE = 'active',
-    FINISHED = 'finished',
-    CANCELLED = 'cancelled',
-  }
+  ACTIVE = 'active',
+  FINISHED = 'finished',
+  CANCELLED = 'cancelled',
+}

@@ -1,39 +1,74 @@
 {
   "pizzas": [
     {
-      "id": "1",
+      "id": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
       "name": "Margherita",
-      "ingredients": [],
-      "description": "A classic Italian pizza with tomato, mozzarella, and basil.",
-      "price": 25.00
+      "ingredients": [
+        "dcd0f12a-af12-4129-bca7-47c38c6cf464",
+        "98ac6531-2e75-48b8-81e9-4e211fe0bc33",
+        "39350c69-7a88-44c8-ba94-c433b3a42c16"
+      ],
+      "description": "A classic ",
+      "price": 25
     },
     {
-      "id": "2",
+      "id": "b2855c06-7719-4b62-8a6a-10300927b1c2",
       "name": "Pepperoni",
-      "ingredients": [],
-      "description": "A pizza with tomato, mozzarella, and pepperoni.",
-      "price": 30.00
+      "ingredients": [
+        "98ac6531-2e75-48b8-81e9-4e211fe0bc33",
+        "59d485a3-3700-4063-8216-9d71e609bfae",
+        "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f"
+      ],
+      "description": "Pizza ipsum dolor amet chicken wing bbq rib marinara, peppers broccoli stuffed bbq sauce melted cheese.",
+      "price": 30
     },
     {
-      "id": "3",
-      "name": "Mushroom",
-      "ingredients": [],
-      "description": "A pizza with tomato, mozzarella, and mushrooms.",
-      "price": 30.00
+      "id": "66285382-e784-4cb5-b36c-8ba73b25cff4",
+      "name": "Shrooms Delight",
+      "ingredients": [
+        "98ac6531-2e75-48b8-81e9-4e211fe0bc33",
+        "e16354a5-4b84-40d5-b488-4da31d400765",
+        "39350c69-7a88-44c8-ba94-c433b3a42c16"
+      ],
+      "description": "A vegan alternative for those who prefer the plants.",
+      "price": 30
     },
     {
-      "id": "4",
-      "name": "Ham",
-      "ingredients": [],
-      "description": "A pizza with tomato, mozzarella, and Ham.",
-      "price": 30.00
+      "id": "fab50ec6-ef57-400f-966e-87c18a8882b5",
+      "name": "Hawaiian",
+      "ingredients": [
+        "98ac6531-2e75-48b8-81e9-4e211fe0bc33",
+        "0ff72226-8ff7-4abf-9d44-b9712e23bed1",
+        "0e3a1a44-a30d-4c24-a335-e3da12876828",
+        "39350c69-7a88-44c8-ba94-c433b3a42c16"
+      ],
+      "description": "Pizza ipsum dolor amet chicken wing bbq rib marinara, peppers broccoli stuffed bbq sauce melted cheese.",
+      "price": 50
     },
     {
-      "id": "5",
-      "name": "Custom",
-      "ingredients": [],
-      "description": "A pizza base with tomato sauce. The rest is up to you.",
-      "price": 5.00
+      "id": "23ecacf3-f802-4a01-9241-329fc9bd4418",
+      "name": "Meat Lover",
+      "ingredients": [
+        "8a632816-793f-434d-94c3-52136f6f6f35",
+        "0e3a1a44-a30d-4c24-a335-e3da12876828",
+        "59d485a3-3700-4063-8216-9d71e609bfae",
+        "c1792c95-45fc-4943-9e96-a432d8801618",
+        "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f",
+        "216e134c-e798-45ca-b800-d14be54a436e",
+        "46a2b16a-346f-4507-aba5-f2f36461d78a",
+        "caac3238-b4eb-4354-b855-eec6b1965579"
+      ],
+      "description": "Pizza ipsum dolor amet chicken wing bbq rib marinara, peppers broccoli stuffed bbq sauce melted cheese.",
+      "price": 50
+    },
+    {
+      "id": "e7955d93-5d94-46e4-93ac-ac4ba174d386",
+      "name": "Customize your Own",
+      "ingredients": [
+        "caac3238-b4eb-4354-b855-eec6b1965579"
+      ],
+      "description": "Pizza base with tomato sauce, the rest is up to you.",
+      "price": 5
     }
   ]
 }

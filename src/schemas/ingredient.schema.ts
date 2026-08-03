@@ -19,6 +19,11 @@ export const UpdateIngredientSchema = z.object({
   stock: z.number().optional()
 });
 
+export const GetIngredientNamesSchema = z.object({
+  ids: z.array(z.string()).min(1)
+});
+
 export type Ingredient = z.infer<typeof IngredientSchema>;
 export type CreateIngredient = z.infer<typeof CreateIngredientSchema>;
 export type UpdateIngredient = z.infer<typeof UpdateIngredientSchema>;
+export type GetIngredientNames = z.infer<typeof GetIngredientNamesSchema>;
