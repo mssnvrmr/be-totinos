@@ -2,28 +2,40 @@
   "orders": [
     {
       "id": "1",
-      "orderedByUserEmail": "jane.doe@example.com",
-      "updatedByUserEmail": "john.doe@example.com",
-      "pizzas": [
-        "1",
-        "2"
+      "orderedByUserEmail": "jan.doe@gmail.com",
+      "updatedByUserEmail": "jan.doe@gmail.com",
+      "items": [
+        {
+          "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
+          "extras": ["98ac6531-2e75-48b8-81e9-4e211fe0bc33"],
+          "quantity": 1
+        },
+        {
+          "pizza": "b2855c06-7719-4b62-8a6a-10300927b1c2",
+          "extras": ["216e134c-e798-45ca-b800-d14be54a436e", "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f"],
+          "quantity": 2
+        }
       ],
-      "status": "finished",
-      "note": "No onions please",
+      "status": "active",
+      "note": "No spice please",
       "createdAt": "2026-07-17T00:48:33.085Z",
-      "updatedAt": "2026-08-17T00:48:33.085Z"
+      "updatedAt": "2026-07-17T00:48:33.085Z"
     },
     {
       "id": "2",
-      "orderedByUserEmail": "jim.beam@example.com",
-      "updatedByUserEmail": "john.doe@example.com",
-      "pizzas": [
-        "5"
+      "orderedByUserEmail": "jon.doe@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
+          "extras": [],
+          "quantity": 1
+        }
       ],
-      "status": "active",
-      "note": "Use the ham for half and the mushrooms for the other half",
+      "status": "finished",
+      "note": "",
       "createdAt": "2026-07-17T00:48:33.085Z",
-      "updatedAt": "2026-08-17T00:48:33.085Z"
+      "updatedAt": "2026-07-17T10:48:33.085Z"
     }
   ]
 }

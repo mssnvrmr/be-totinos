@@ -18,11 +18,25 @@ const idFromPizzasRecordSchema = z.string().refine(
   { message: "The provided id does not match any pizza record in the database." }
 );
 
+const idFromIngredientsRecordSchema = z.string().refine(
+  (id) => {
+    const currentKeys = getValidRecordKeysById("ingredients.json");
+    return currentKeys.includes(id);
+  },
+  { message: "The provided id does not match any ingredient record in the database." }
+);
+
+export const OrderItemSchema = z.object({
+  pizza: idFromPizzasRecordSchema,
+  extras: z.array(idFromIngredientsRecordSchema),
+  quantity: z.number().int().positive(),
+});
+
 export const OrderSchema = z.object({
   id: z.string(),
   orderedByUserEmail: emailFromUsersRecordSchema,
   updatedByUserEmail: emailFromUsersRecordSchema,
-  pizzas: z.array(idFromPizzasRecordSchema),
+  items: z.array(OrderItemSchema),
   status: z.enum(OrderStatus),
   note: z.string().optional(),
   createdAt: z.iso.datetime(),
@@ -31,19 +45,19 @@ export const OrderSchema = z.object({
 
 export const CreateOrderSchema = z.object({
   orderedByUserEmail: emailFromUsersRecordSchema,
-  pizzas: z.array(idFromPizzasRecordSchema),
+  items: z.array(OrderItemSchema).min(1),
   status: z.enum(OrderStatus),
   note: z.string().optional(),
 });
 
 export const UpdateOrderSchema = z.object({
   updatedByUserEmail: emailFromUsersRecordSchema,
-  pizzas: z.array(idFromPizzasRecordSchema).optional(),
+  items: z.array(OrderItemSchema).optional(),
   status: z.enum(OrderStatus).optional(),
   note: z.string().optional(),
-  updatedAt: z.iso.datetime(),
 });
 
+export type OrderItem = z.infer<typeof OrderItemSchema>;
 export type Order = z.infer<typeof OrderSchema>;
 export type CreateOrder = z.infer<typeof CreateOrderSchema>;
 export type UpdateOrder = z.infer<typeof UpdateOrderSchema>;

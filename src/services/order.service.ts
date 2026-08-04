@@ -3,9 +3,9 @@ import { HttpError } from '../utils/http-error';
 import { CreateOrderModel } from '../models/order.model';
 import { Order, CreateOrder, UpdateOrder } from '../schemas/order.schema';
 
-export const create = async ({ orderedByUserEmail, pizzas, status, note }: CreateOrder) => {
+export const create = async ({ orderedByUserEmail, items, status, note }: CreateOrder) => {
   const db = readDB("orders.json");
-  const newOrder = CreateOrderModel({ orderedByUserEmail, pizzas, status, note });
+  const newOrder = CreateOrderModel({ orderedByUserEmail, items, status, note });
   db.orders.push(newOrder);
   writeDB("orders.json", db);
 
@@ -26,7 +26,7 @@ export const getById = async (id: string) => {
   return order;
 }
 
-export const update = async (id: string, { updatedByUserEmail, pizzas, status, note }: UpdateOrder) => {
+export const update = async (id: string, { updatedByUserEmail, items, status, note }: UpdateOrder) => {
   const db = readDB("orders.json");
   const order = db.orders.find((order: Order) => order.id === id);
 
@@ -35,9 +35,9 @@ export const update = async (id: string, { updatedByUserEmail, pizzas, status, n
   }
 
   order.updatedByUserEmail = updatedByUserEmail;
-  order.pizzas = pizzas;
-  order.status = status;
-  order.note = note;
+  if (items !== undefined) order.items = items;
+  if (status !== undefined) order.status = status;
+  if (note !== undefined) order.note = note;
   order.updatedAt = new Date().toISOString();
   writeDB("orders.json", db);
 
