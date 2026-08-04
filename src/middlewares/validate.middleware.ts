@@ -18,3 +18,21 @@ export const validate =
       req.body = result.data;
       next();
     };
+
+export const validateQuery =
+  <T>(schema: ZodType<T>): RequestHandler =>
+    (req, res, next) => {
+      const result = schema.safeParse(req.query);
+      if (!result.success) {
+        res.status(400).json({
+          message: "Validation error",
+          errors: result.error.issues.map((e) => ({
+            field: e.path.join("."),
+            message: e.message,
+          })),
+        });
+        return;
+      }
+      req.body = result.data;
+      next();
+    };

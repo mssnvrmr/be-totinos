@@ -20,7 +20,10 @@ export const UpdateIngredientSchema = z.object({
 });
 
 export const GetIngredientNamesSchema = z.object({
-  ids: z.array(z.string()).min(1)
+  ids: z.preprocess(
+    (val) => (typeof val === "string" ? [val] : val),
+    z.array(z.string()).min(1)
+  ),
 });
 
 export type Ingredient = z.infer<typeof IngredientSchema>;
