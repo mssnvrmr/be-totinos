@@ -26,6 +26,15 @@ export const getById = async (id: string) => {
   return order;
 }
 
+export const getByUserEmail = async (userEmail: string) => {
+  const db = readDB("orders.json");
+  const orders = db.orders.filter((order: Order) => order.orderedByUserEmail === userEmail);
+  if (orders.length === 0) {
+    throw new HttpError("No orders found for user", 404);
+  }
+  return orders;
+}
+
 export const update = async (id: string, { updatedByUserEmail, items, status, note }: UpdateOrder) => {
   const db = readDB("orders.json");
   const order = db.orders.find((order: Order) => order.id === id);

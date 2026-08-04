@@ -41,10 +41,14 @@ const login = async ({ email, password }: LoginUser) => {
     throw error;
   }
 
-  const token = jwt.sign({ id: foundUser.id, email: foundUser.email }, process.env.JWT_SECRET as string, { expiresIn: "24h" });
-  const name = foundUser.username;
   const role = foundUser.role;
-  
+  const token = jwt.sign(
+    { id: foundUser.id, email: foundUser.email, role },
+    process.env.JWT_SECRET as string,
+    { expiresIn: "24h" },
+  );
+  const name = foundUser.username;
+
   return { token, name, role };
 }
 
