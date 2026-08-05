@@ -68,7 +68,12 @@ export const getByEmail = async (req: Request<{ email: string }>, res: Response,
 
 export const update = async (req: Request<{ id: string }> & { body: UpdateUser }, res: Response, next: NextFunction) => {
   try {
-    const user = await updateService(req.params.id, req.body as UpdateUser);
+    const requester = (req as Request & { user?: { id: string; role: UserRole } }).user;
+    const body = { ...req.body } as UpdateUser;
+    if (requester?.role !== UserRole.ADMIN) {
+      body.role = requester?.role;
+    }
+    const user = await updateService(req.params.id, body);
     res.status(200).json(user);
   } catch (error) {
     next(error);

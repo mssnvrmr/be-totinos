@@ -26,4 +26,12 @@ export const isAdmin = async (req: Request, res: Response, next: NextFunction) =
     return res.status(403).json({ message: 'Forbidden' });
   }
   next();
-};  
+};
+
+export const isAdminOrSelf = async (req: Request, res: Response, next: NextFunction) => {
+  const user = (req as Request & { user?: User }).user;
+  if (user?.role === UserRole.ADMIN || user?.id === req.params.id) {
+    return next();
+  }
+  return res.status(403).json({ message: 'Forbidden' });
+};
