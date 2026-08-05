@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "edd51f22-5555-46ef-92b6-8604a5bd5b49",
-      "username": "jannyDoe",
+      "username": "JannyDoe",
       "email": "jan.doe@gmail.com",
       "phone": "5060984577",
       "password": "$2b$10$cjBkawj2XTZzpEG6ieTm5eiQS0HKpOh4hrZdl41ORX1s/w7gZrxxy",
@@ -11,10 +11,10 @@
     },
     {
       "id": "8297451f-db72-4e03-9cd9-16c67e2dc056",
-      "username": "Pedrito",
+      "username": "Admin",
       "email": "admin@gmail.com",
       "password": "$2b$10$R/3Zng0jpBjrK10/tumENufUn3YD3eYulw/NG34SoTagw/Q5yIS/S",
-      "phone": "543 0984 113",
+      "phone": "5430984113",
       "createdAt": "2026-07-25T21:11:39.360Z",
       "role": "admin"
     },

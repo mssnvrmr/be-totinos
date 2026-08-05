@@ -6,7 +6,7 @@ import { CreateOrderSchema, UpdateOrderSchema } from '../schemas/order.schema';
 
 export const router = Router();
 
-router.post('/', authenticate, isAdmin, validate(CreateOrderSchema), create);
+router.post('/', authenticate, validate(CreateOrderSchema), create);
 router.get('/', authenticate, getAll);
 router.get('/:id', authenticate, isAdmin, getById);
 router.get('/user/:userEmail', authenticate, getByUserEmail);
