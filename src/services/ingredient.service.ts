@@ -58,9 +58,9 @@ const update = async (id: string, { name, price, stock }: UpdateIngredient) => {
     throw error;
   }
 
-  ingredient.name = name || ingredient.name;
-  ingredient.price = price || ingredient.price;
-  ingredient.stock = stock || ingredient.stock;
+  if (name !== undefined) ingredient.name = name;
+  if (price !== undefined) ingredient.price = price;
+  if (stock !== undefined) ingredient.stock = stock;
 
   writeDB("ingredients.json", db);
   return ingredient;

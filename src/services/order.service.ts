@@ -1,10 +1,64 @@
 import { readDB, writeDB } from '../utils/db';
 import { HttpError } from '../utils/http-error';
 import { CreateOrderModel } from '../models/order.model';
-import { Order, CreateOrder, UpdateOrder } from '../schemas/order.schema';
+import { Order, CreateOrder, OrderItem, UpdateOrder } from '../schemas/order.schema';
+import { Ingredient } from '../schemas/ingredient.schema';
+import { Pizza } from '../schemas/pizza.schema';
+import { STOCK_PER_UNIT } from '../constants/stock';
+
+const getRequiredStock = (items: OrderItem[], pizzas: Pizza[]) => {
+  const required = new Map<string, number>();
+
+  for (const item of items) {
+    const pizza = pizzas.find((pizza: Pizza) => pizza.id === item.pizza);
+
+    if (!pizza) {
+      throw new HttpError(`Pizza not found: ${item.pizza}`, 404);
+    }
+
+    for (const ingredientId of [...pizza.ingredients, ...item.extras]) {
+      const current = required.get(ingredientId) ?? 0;
+      required.set(ingredientId, current + item.quantity * STOCK_PER_UNIT);
+    }
+  }
+
+  return required;
+}
+
+const consumeStock = (items: OrderItem[]) => {
+  const pizzasDB = readDB("pizzas.json");
+  const ingredientsDB = readDB("ingredients.json");
+  const required = getRequiredStock(items, pizzasDB.pizzas);
+
+  const targets = [...required.entries()].map(([id, amount]) => {
+    const ingredient = ingredientsDB.ingredients.find((ingredient: Ingredient) => ingredient.id === id);
+
+    if (!ingredient) {
+      throw new HttpError(`Ingredient not found: ${id}`, 404);
+    }
+
+    return { ingredient, amount };
+  });
+
+  const insufficient = targets
+    .filter(({ ingredient, amount }) => ingredient.stock < amount)
+    .map(({ ingredient }) => ingredient.name);
+
+  if (insufficient.length > 0) {
+    throw new HttpError(`Not enough stock for: ${insufficient.join(', ')}`, 409);
+  }
+
+  targets.forEach(({ ingredient, amount }) => {
+    ingredient.stock -= amount;
+  });
+
+  writeDB("ingredients.json", ingredientsDB);
+}
 
 export const create = async ({ orderedByUserEmail, items, status, note }: CreateOrder) => {
   const db = readDB("orders.json");
+  consumeStock(items);
+
   const newOrder = CreateOrderModel({ orderedByUserEmail, items, status, note });
   db.orders.push(newOrder);
   writeDB("orders.json", db);
