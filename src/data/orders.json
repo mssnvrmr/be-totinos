@@ -1,41 +1,59 @@
 {
   "orders": [
     {
-      "id": "1",
+      "id": "41f976e3-1e30-4ddf-9540-f301966c2c9b",
+      "orderedByUserEmail": "admin@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "66285382-e784-4cb5-b36c-8ba73b25cff4",
+          "extras": [
+            "98ac6531-2e75-48b8-81e9-4e211fe0bc33",
+            "e16354a5-4b84-40d5-b488-4da31d400765"
+          ],
+          "quantity": 1
+        }
+      ],
+      "status": "active",
+      "note": "Don't add napkins",
+      "createdAt": "2026-08-05T23:00:04.104Z",
+      "updatedAt": "2026-08-05T23:00:04.104Z"
+    },
+    {
+      "id": "73df339a-82b8-4dda-8e4b-28dff22d6f19",
       "orderedByUserEmail": "jan.doe@gmail.com",
       "updatedByUserEmail": "jan.doe@gmail.com",
       "items": [
         {
-          "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
-          "extras": ["98ac6531-2e75-48b8-81e9-4e211fe0bc33"],
-          "quantity": 1
-        },
-        {
           "pizza": "b2855c06-7719-4b62-8a6a-10300927b1c2",
-          "extras": ["216e134c-e798-45ca-b800-d14be54a436e", "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f"],
-          "quantity": 2
+          "extras": [
+            "46a2b16a-346f-4507-aba5-f2f36461d78a"
+          ],
+          "quantity": 1
         }
       ],
       "status": "active",
-      "note": "No spice please",
-      "createdAt": "2026-07-17T00:48:33.085Z",
-      "updatedAt": "2026-07-17T00:48:33.085Z"
+      "note": "Write a joke on the box :)",
+      "createdAt": "2026-08-05T23:20:12.767Z",
+      "updatedAt": "2026-08-05T23:20:12.767Z"
     },
     {
-      "id": "2",
-      "orderedByUserEmail": "jon.doe@gmail.com",
+      "id": "3a6f7609-60ca-478a-bb16-808fb2606369",
+      "orderedByUserEmail": "admin@gmail.com",
       "updatedByUserEmail": "admin@gmail.com",
       "items": [
         {
           "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
-          "extras": [],
+          "extras": [
+            "8fade6dc-6bd1-4f6d-be1b-08ba8de55828"
+          ],
           "quantity": 1
         }
       ],
-      "status": "finished",
-      "note": "",
-      "createdAt": "2026-07-17T00:48:33.085Z",
-      "updatedAt": "2026-07-17T10:48:33.085Z"
+      "status": "active",
+      "note": "Aloha",
+      "createdAt": "2026-08-05T23:33:34.286Z",
+      "updatedAt": "2026-08-05T23:33:34.286Z"
     }
   ]
 }
