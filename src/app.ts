@@ -14,7 +14,7 @@ import { errorHandler } from "./middlewares/error.middleware";
 export const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://fe-totinos.vercel.app/"],
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 }));
