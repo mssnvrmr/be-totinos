@@ -58,7 +58,7 @@
     {
       "id": "57627d61-8683-4131-bce3-144bf2758c98",
       "orderedByUserEmail": "jan.doe@gmail.com",
-      "updatedByUserEmail": "jan.doe@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
       "items": [
         {
           "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
@@ -68,10 +68,10 @@
           "quantity": 1
         }
       ],
-      "status": "active",
+      "status": "finished",
       "note": "",
       "createdAt": "2026-08-05T23:49:52.686Z",
-      "updatedAt": "2026-08-05T23:49:52.686Z"
+      "updatedAt": "2026-08-06T00:01:35.352Z"
     },
     {
       "id": "11b1145c-ef59-40ea-80c2-1bd238b1a1b0",
@@ -90,6 +90,163 @@
       "note": "",
       "createdAt": "2026-08-05T23:50:44.928Z",
       "updatedAt": "2026-08-05T23:50:44.928Z"
+    },
+    {
+      "id": "3b00b591-cd34-4271-a381-7d193aa234fa",
+      "orderedByUserEmail": "jan.doe@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
+          "extras": [
+            "8fade6dc-6bd1-4f6d-be1b-08ba8de55828"
+          ],
+          "quantity": 2
+        }
+      ],
+      "status": "finished",
+      "note": "",
+      "createdAt": "2026-08-06T00:03:18.609Z",
+      "updatedAt": "2026-08-06T00:03:42.902Z"
+    },
+    {
+      "id": "34cb28fc-1283-464f-baa9-347e3ad814b8",
+      "orderedByUserEmail": "kevin@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "e7955d93-5d94-46e4-93ac-ac4ba174d386",
+          "extras": [
+            "8a632816-793f-434d-94c3-52136f6f6f35",
+            "0e3a1a44-a30d-4c24-a335-e3da12876828",
+            "216e134c-e798-45ca-b800-d14be54a436e",
+            "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f",
+            "39350c69-7a88-44c8-ba94-c433b3a42c16",
+            "c1792c95-45fc-4943-9e96-a432d8801618",
+            "46a2b16a-346f-4507-aba5-f2f36461d78a"
+          ],
+          "quantity": 1
+        }
+      ],
+      "status": "finished",
+      "note": "",
+      "createdAt": "2026-08-06T00:04:21.857Z",
+      "updatedAt": "2026-08-06T00:08:25.600Z"
+    },
+    {
+      "id": "7a39c1a7-41db-40a7-a4be-17b90f0383ec",
+      "orderedByUserEmail": "kevin@gmail.com",
+      "updatedByUserEmail": "kevin@gmail.com",
+      "items": [
+        {
+          "pizza": "fab50ec6-ef57-400f-966e-87c18a8882b5",
+          "extras": [],
+          "quantity": 1
+        },
+        {
+          "pizza": "66285382-e784-4cb5-b36c-8ba73b25cff4",
+          "extras": [],
+          "quantity": 1
+        }
+      ],
+      "status": "cancelled",
+      "note": "Send napkins please",
+      "createdAt": "2026-08-06T00:04:43.604Z",
+      "updatedAt": "2026-08-06T00:05:20.845Z"
+    },
+    {
+      "id": "84adb2f5-fe3e-4ad0-8463-6727558a9c0d",
+      "orderedByUserEmail": "kevin@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "23ecacf3-f802-4a01-9241-329fc9bd4418",
+          "extras": [],
+          "quantity": 2
+        }
+      ],
+      "status": "finished",
+      "note": "",
+      "createdAt": "2026-08-06T00:04:50.409Z",
+      "updatedAt": "2026-08-06T00:05:05.555Z"
+    },
+    {
+      "id": "424c944e-e48b-46c3-b14d-6a440d0e97b2",
+      "orderedByUserEmail": "mariana@gmail.com",
+      "updatedByUserEmail": "mariana@gmail.com",
+      "items": [
+        {
+          "pizza": "66285382-e784-4cb5-b36c-8ba73b25cff4",
+          "extras": [
+            "0e3a1a44-a30d-4c24-a335-e3da12876828",
+            "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f",
+            "0ff72226-8ff7-4abf-9d44-b9712e23bed1"
+          ],
+          "quantity": 1
+        }
+      ],
+      "status": "active",
+      "note": "",
+      "createdAt": "2026-08-06T00:05:44.778Z",
+      "updatedAt": "2026-08-06T00:05:44.778Z"
+    },
+    {
+      "id": "99f852d3-f5b9-40c5-bdb1-cf94de06a216",
+      "orderedByUserEmail": "mariana@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "b2855c06-7719-4b62-8a6a-10300927b1c2",
+          "extras": [
+            "dcd0f12a-af12-4129-bca7-47c38c6cf464",
+            "0ff72226-8ff7-4abf-9d44-b9712e23bed1"
+          ],
+          "quantity": 1
+        }
+      ],
+      "status": "finished",
+      "note": "",
+      "createdAt": "2026-08-06T00:06:02.098Z",
+      "updatedAt": "2026-08-06T00:08:24.825Z"
+    },
+    {
+      "id": "9a499baf-031e-47a8-8f0f-4fd30c63e7c7",
+      "orderedByUserEmail": "mariana@gmail.com",
+      "updatedByUserEmail": "mariana@gmail.com",
+      "items": [
+        {
+          "pizza": "8c524558-53d9-45dc-ac3f-1c07bece58c4",
+          "extras": [
+            "8a632816-793f-434d-94c3-52136f6f6f35"
+          ],
+          "quantity": 2
+        }
+      ],
+      "status": "active",
+      "note": "",
+      "createdAt": "2026-08-06T00:06:59.661Z",
+      "updatedAt": "2026-08-06T00:06:59.661Z"
+    },
+    {
+      "id": "0b83a8eb-c665-4c4d-adb2-bf2e15ba048c",
+      "orderedByUserEmail": "jan.doe@gmail.com",
+      "updatedByUserEmail": "admin@gmail.com",
+      "items": [
+        {
+          "pizza": "e7955d93-5d94-46e4-93ac-ac4ba174d386",
+          "extras": [
+            "dcd0f12a-af12-4129-bca7-47c38c6cf464",
+            "0ff72226-8ff7-4abf-9d44-b9712e23bed1",
+            "c1792c95-45fc-4943-9e96-a432d8801618",
+            "46a2b16a-346f-4507-aba5-f2f36461d78a"
+          ],
+          "quantity": 1
+        }
+      ],
+      "status": "cancelled",
+      "note": "",
+      "createdAt": "2026-08-06T00:07:46.009Z",
+      "updatedAt": "2026-08-06T00:08:27.323Z"
     }
   ]
 }

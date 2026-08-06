@@ -4,73 +4,73 @@
       "id": "8fade6dc-6bd1-4f6d-be1b-08ba8de55828",
       "name": "Olives",
       "price": 5,
-      "stock": 1400
+      "stock": 1200
     },
     {
       "id": "98ac6531-2e75-48b8-81e9-4e211fe0bc33",
       "name": "Mozzarella Cheese",
       "price": 10,
-      "stock": 5360
+      "stock": 4560
     },
     {
       "id": "e16354a5-4b84-40d5-b488-4da31d400765",
       "name": "Mushrooms",
       "price": 12.5,
-      "stock": 3023.25
+      "stock": 2823.25
     },
     {
       "id": "59d485a3-3700-4063-8216-9d71e609bfae",
       "name": "Pepperoni",
       "price": 5.5,
-      "stock": 2000
+      "stock": 1700
     },
     {
       "id": "8a632816-793f-434d-94c3-52136f6f6f35",
       "name": "Sausage",
       "price": 8,
-      "stock": 1035.5
+      "stock": 535.5
     },
     {
       "id": "0e3a1a44-a30d-4c24-a335-e3da12876828",
       "name": "Ham",
       "price": 3.4,
-      "stock": 1884.5
+      "stock": 1384.5
     },
     {
       "id": "216e134c-e798-45ca-b800-d14be54a436e",
       "name": "Onions",
       "price": 3.2,
-      "stock": 1000.1
+      "stock": 700.1
     },
     {
       "id": "ce1da367-da1c-49f0-9ccd-a1ded2ee8a1f",
       "name": "Bell Peppers",
       "price": 2.5,
-      "stock": 500.32
+      "stock": 4000.32
     },
     {
       "id": "39350c69-7a88-44c8-ba94-c433b3a42c16",
       "name": "Basil",
       "price": 8.23,
-      "stock": 825
+      "stock": 25
     },
     {
       "id": "dcd0f12a-af12-4129-bca7-47c38c6cf464",
       "name": "Tomatoes",
       "price": 4.7,
-      "stock": 980
+      "stock": 380
     },
     {
       "id": "0ff72226-8ff7-4abf-9d44-b9712e23bed1",
       "name": "Pineapple",
       "price": 4,
-      "stock": 450
+      "stock": 5000
     },
     {
       "id": "c1792c95-45fc-4943-9e96-a432d8801618",
       "name": "Bacon",
       "price": 5.2,
-      "stock": 1040
+      "stock": 1640
     },
     {
       "id": "2edb9b7b-c1eb-4f07-8fdd-f0d15116a267",
@@ -82,13 +82,19 @@
       "id": "caac3238-b4eb-4354-b855-eec6b1965579",
       "name": "Tomato (Sauce)",
       "price": 5,
-      "stock": 5000
+      "stock": 4300
     },
     {
       "id": "46a2b16a-346f-4507-aba5-f2f36461d78a",
       "name": "Chicken",
       "price": 8,
-      "stock": 3200
+      "stock": 2800
+    },
+    {
+      "id": "0ce5f600-aaa8-43c3-8582-a167f2d1df38",
+      "name": "Magic",
+      "price": 10,
+      "stock": 1
     }
   ]
 }

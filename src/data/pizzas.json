@@ -44,7 +44,7 @@
         "39350c69-7a88-44c8-ba94-c433b3a42c16",
         "caac3238-b4eb-4354-b855-eec6b1965579"
       ],
-      "description": "Pizza ipsum dolor amet chicken wing bbq rib marinara, peppers broccoli stuffed bbq sauce melted cheese.",
+      "description": "I have no idea why would anyone want to add pineapple to their pizza but sure",
       "price": 50
     },
     {
@@ -71,6 +71,18 @@
       ],
       "description": "Pizza base with tomato sauce, the rest is up to you.",
       "price": 5
+    },
+    {
+      "id": "48c5fbfa-ca73-4241-a319-42c16a12cf85",
+      "name": "Magical One",
+      "ingredients": [
+        "e16354a5-4b84-40d5-b488-4da31d400765",
+        "0ce5f600-aaa8-43c3-8582-a167f2d1df38",
+        "caac3238-b4eb-4354-b855-eec6b1965579",
+        "8fade6dc-6bd1-4f6d-be1b-08ba8de55828"
+      ],
+      "description": "Every bite invokes the rainbow",
+      "price": 1000
     }
   ]
 }
